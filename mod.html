@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<title>HHNiOS - Project for Theos</title>
+<style>
+  /* Global Styles */
+  .color-tab {
+    background-color: #ff0000;
+  }
+
+  html,
+  body {
+   
+    overflow: auto;
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Thêm background-image và background-size */
+    background-image: url('https://images3.alphacoders.com/130/1305084.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+  }
+
+  /* Container Styles */
+  .container {
+    position: relative;
+    overflow: hidden;
+    /*width: 100%;*/
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Styles */
+  .header {
+    background-image: linear-gradient(to right, #ffa600, #ff0000);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .header h1 {
+    margin: 0;
+    color: #fff;
+  }
+
+  /* Tab Styles */
+  .tab-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff7b00c9;
+    color: rgb(243, 243, 243);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .tab-button:hover {
+    opacity: 1;
+  }
+
+  .tab-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: 2;
+  }
+
+  .tab-content.open {
+    transform: scale(1);
+  }
+
+  .tab-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .tab-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Blog Styles */
+  .blog-container {
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+  }
+
+  .blog-post {
+    background-color: rgba(255, 226, 63, 0.603);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-post:hover {
+    transform: scale(1.05);
+  }
+
+  .blog-post h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #007aff;
+  }
+
+  .blog-post img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 24px;
+    }
+
+    .tab-button {
+      top: 10px;
+      right: 10px;
+      padding: 8px 15px;
+    }
+
+    .tab-content a {
+      margin-bottom: 15px;
+    }
+
+    .tab-close {
+      top: 20px;
+      right: 20px;
+    }
+
+    .blog-post h3 {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>File Mod Skin</h1>
+    </div>
+    <div class="blog-container">
+      <div class="blog-post">
+        <h3>Máy mạnh</h3>
+        <img src="https://github.com/WeansHHN/project/blob/main/image.jpg?raw=true" alt="Image 2">
+        <a href="https://drive.google.com/file/d/18ZZvHh9jXlJs2UrYgwxxzSsfNHqTr32N/view?usp=drivesdk" class="main-button">Xem thêm</a>
+      </div>
+      <!-- Add more blog posts here -->
+      <div class="blog-post">
+        <h3>Máy yếu</h3>
+        <img src="https://github.com/WeansHHN/project/blob/main/image.jpg?raw=true" alt="Image 1">
+        <a href="https://drive.google.com/file/d/1wPn3phK1s6U2z8cBxpIpZ-4FeTdo6fdO/view?usp=drivesdk" class="main-button">Xem thêm</a>
+      </div>
+      <!-- Add more blog posts here -->
+      <div class="blog-post">
+        <h3>Máy siêu yếu</h3>
+        <img src="https://github.com/WeansHHN/project/blob/main/image.jpg?raw=true" alt="Image 2">
+        <a href="https://drive.google.com/file/d/1gCOk3wLIbqf-a-TisXI6MAqr7EnoLysL/view?usp=drivesdk" class="main-button">Xem thêm</a>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</body>
+</html>
